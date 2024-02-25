@@ -27,14 +27,14 @@ class User(db.Model):
     obtenir_adresse_ip = db.Column(db.Boolean, default=False)
     points = db.Column(db.Integer, default=0)
     
-    bonjour_le_monde_last_update = db.Column(db.DateTime, default=None, onupdate=None)
-    entree_utilisateur_last_update = db.Column(db.DateTime, default=None, onupdate=None)
-    calculatrice_de_base_last_update = db.Column(db.DateTime, default=None, onupdate=None)
-    convertisseur_temperature_last_update = db.Column(db.DateTime, default=None, onupdate=None)
-    calculateur_surface_last_update = db.Column(db.DateTime, default=None, onupdate=None)
-    convertisseur_devise_last_update = db.Column(db.DateTime, default=None, onupdate=None)
-    generateur_mot_de_passe_last_update = db.Column(db.DateTime, default=None, onupdate=None)
-    obtenir_adresse_ip_last_update = db.Column(db.DateTime, default=None, onupdate=None)
+    bonjour_le_monde_last_update = db.Column(db.DateTime, default=None)
+    entree_utilisateur_last_update = db.Column(db.DateTime, default=None)
+    calculatrice_de_base_last_update = db.Column(db.DateTime, default=None)
+    convertisseur_temperature_last_update = db.Column(db.DateTime, default=None)
+    calculateur_surface_last_update = db.Column(db.DateTime, default=None)
+    convertisseur_devise_last_update = db.Column(db.DateTime, default=None)
+    generateur_mot_de_passe_last_update = db.Column(db.DateTime, default=None)
+    obtenir_adresse_ip_last_update = db.Column(db.DateTime, default=None)
 
 
 # Create the database tables
@@ -112,6 +112,7 @@ def test_input():
                     user.points += 5
                     points = user.points
                     user.bonjour_le_monde = True
+                    user.bonjour_le_monde_last_update = datetime.now()
                     db.session.commit()
             case 2:
                 res = test.test2(input_script, user_name)
@@ -119,6 +120,7 @@ def test_input():
                     user.points += 10
                     points = user.points
                     user.entree_utilisateur = True
+                    user.entree_utilisateur_last_update = datetime.now()
                     db.session.commit()
             case 3:
                 res = test.test3(input_script, user_name)
@@ -126,6 +128,7 @@ def test_input():
                     user.points += 15
                     points = user.points
                     user.calculatrice_de_base = True
+                    user.calculatrice_de_base_last_update = datetime.now()
                     db.session.commit()
             case 4:
                 res = test.test4(input_script, user_name)
@@ -133,12 +136,14 @@ def test_input():
                     user.points += 10
                     points = user.points
                     user.convertisseur_temperature = True
+                    user.convertisseur_temperature_last_update = datetime.now()
                     db.session.commit()
             case 5:
                 res = test.test5(input_script, user_name)
                 if res:
                     user.points += 10
                     user.convertisseur_devise = True
+                    user.convertisseur_devise_last_update = datetime.now()
                     points = user.points
                     db.session.commit()
             case 6:
@@ -147,6 +152,7 @@ def test_input():
                     user.points += 14
                     points = user.points
                     user.calculateur_surface = True
+                    user.calculateur_surface_last_update = datetime.now()
                     db.session.commit()
             case 7:
                 res = test.test7(input_script, user_name)
@@ -154,6 +160,7 @@ def test_input():
                     user.points += 16
                     points = user.points
                     user.generateur_mot_de_passe = True
+                    user.generateur_mot_de_passe_last_update = datetime.now()
                     db.session.commit()
             case 8:
                 res = test.test8(input_script, user_name)
@@ -161,6 +168,7 @@ def test_input():
                     user.points += 22
                     points = user.points
                     user.obtenir_adresse_ip = True
+                    user.obtenir_adresse_ip_last_update = datetime.now()
                     db.session.commit()
                 
                 

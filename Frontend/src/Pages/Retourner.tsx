@@ -4,7 +4,7 @@ import pythonWeekend from "./PythonWeekendPage.json";
 import React from "react";
 // ... (other imports)
 
-const BACK_END_URL = "http://10.11.1.1:4040";
+const BACK_END_URL = "http://127.0.0.1:5000";
 
 export const Retourner = () => {
   const [name, setName] = useState<string>(
