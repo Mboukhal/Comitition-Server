@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenges</title>
+  </head>
+  <body>
+    <h1>{{ user.name }} - Challenges</h1>
+    <ul>
+      {% for challenge in challenges %}
+      <li>
+        {{ challenge.title }} - {{ "Passed" if challenge.pass_status else "Not
+        Passed" }}
+        <form
+          action="{{ url_for('submit_challenge', challenge_id=challenge.id) }}"
+          method="post"
+        >
+          <button type="submit">Submit Challenge</button>
+        </form>
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

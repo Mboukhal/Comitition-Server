@@ -1,0 +1,55 @@
+{
+  "pythonWeekend": [
+    {
+      "title": "Bonjour le Monde en Python",
+      "description": "Commencez avec le programme classique \"Bonjour le Monde !\". Apprenez comment afficher un message dans la console en utilisant Python.",
+      "output": "$ python bonjour_monde.py\nBonjour, le Monde !",
+      "pass": false
+    },
+    {
+      "title": "Entrée Utilisateur",
+      "description": "Obtenez une expérience pratique de la saisie utilisateur. Écrivez un programme qui prend l'entrée de l'utilisateur et l'affiche à l'écran.",
+      "output": "$ python saisie_utilisateur.py\nEntrez quelque chose : Python\nVous avez saisi : Python",
+      "pass": false
+    },
+    {
+      "title": "Calculatrice de Base",
+      "description": "Construisez une calculatrice simple qui effectue des opérations arithmétiques de base. Comprenez comment prendre l'entrée de l'utilisateur et effectuer des calculs.",
+      "output": "$ python calculatrice_de_base.py\nEntrez le premier nombre : 5\nEntrez l'opérateur (+, -, *, /) : *\nEntrez le deuxième nombre : 3\nRésultat : 15.0",
+      "pass": false
+    },
+    {
+      "title": "Convertisseur de Température",
+      "description": "Convertissez des températures entre Celsius et Fahrenheit. Apprenez à utiliser des formules pour une conversion unitaire de base.",
+      "output": "$ python convertisseur_temperature.py\nEntrez la température en Celsius : 25\nTempérature en Fahrenheit : 77.0",
+      "pass": false
+    },
+    {
+      "title": "Calculateur de Surface",
+      "description": "Calculez la surface de différentes formes en fonction de l'entrée utilisateur. Comprenez les instructions conditionnelles pour différents calculs.",
+      "output": "$ python calculateur_surface.py\nEntrez la forme (rectangle, cercle) : rectangle\nEntrez la longueur : 4\nEntrez la largeur : 5\nSurface : 20.0",
+      "pass": false
+    },
+    {
+      "title": "Convertisseur de Devise",
+      "description": "Créez un programme qui convertit les valeurs de devise. Entraînez-vous à utiliser la saisie utilisateur et les opérations arithmétiques de base, baser sur (1 US Dollar == 10.03 Moroccan Dirham).",
+      "output": "$ python convertisseur_devise.py\nEntrez le montant (USD) : 50\nMontant converti : 501,53 MAD",
+      "pass": false
+    },
+    {
+      "title": "Générateur de Mot de Passe Aléatoire",
+      "description": "Générez des mots de passe aléatoires d'une longueur spécifiée. Explorez l'utilisation du module aléatoire.",
+      "output": "$ python generateur_mot_de_passe.py\nEntrez la longueur du mot de passe : 8\nVotre mot de passe aléatoire : aB#3fGh9",
+      "pass": false
+    },
+    {
+      "title": "Obtenir l'adresse IP",
+      "description": "Rédigez un script Python pour récupérer l'adresse IP du site web. Apprenez à utiliser le module `socket` pour effectuer une requête DNS de base (Domain Name System) et obtenir l'adresse IP associée à \"www.example.com\".",
+      "output": [
+        "$ python get_ip.py www.example.com\nAdresse IP de \"www.example.com\" : 172.217.166.100\n",
+        "$ python get_ip.py www.exampleblabla.com\nAdresse IP de \"www.exampleblabla.com\" : Not Found"
+      ],
+      "pass": false
+    }
+  ]
+}
