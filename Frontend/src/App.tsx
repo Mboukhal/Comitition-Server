@@ -3,7 +3,7 @@ import { Guide } from "./Pages/Guide";
 import { Retourner } from "./Pages/Retourner";
 
 const App = () => {
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(0);
 
   return (
     <div className="h-screen w-screen flex flex-col text-green-50 overflow-x-auto">
