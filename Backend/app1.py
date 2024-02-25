@@ -27,14 +27,14 @@ class User(db.Model):
     obtenir_adresse_ip = db.Column(db.Boolean, default=False)
     points = db.Column(db.Integer, default=0)
     
-    bonjour_le_monde_last_update = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
-    entree_utilisateur_last_update = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
-    calculatrice_de_base_last_update = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
-    convertisseur_temperature_last_update = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
-    calculateur_surface_last_update = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
-    convertisseur_devise_last_update = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
-    generateur_mot_de_passe_last_update = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
-    obtenir_adresse_ip_last_update = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    bonjour_le_monde_last_update = db.Column(db.DateTime, default=None, onupdate=None)
+    entree_utilisateur_last_update = db.Column(db.DateTime, default=None, onupdate=None)
+    calculatrice_de_base_last_update = db.Column(db.DateTime, default=None, onupdate=None)
+    convertisseur_temperature_last_update = db.Column(db.DateTime, default=None, onupdate=None)
+    calculateur_surface_last_update = db.Column(db.DateTime, default=None, onupdate=None)
+    convertisseur_devise_last_update = db.Column(db.DateTime, default=None, onupdate=None)
+    generateur_mot_de_passe_last_update = db.Column(db.DateTime, default=None, onupdate=None)
+    obtenir_adresse_ip_last_update = db.Column(db.DateTime, default=None, onupdate=None)
 
 
 # Create the database tables
@@ -123,50 +123,47 @@ def test_input():
             case 3:
                 res = test.test3(input_script, user_name)
                 if res:
-                    user.points += 13
+                    user.points += 15
                     points = user.points
                     user.calculatrice_de_base = True
                     db.session.commit()
             case 4:
                 res = test.test4(input_script, user_name)
                 if res:
-                    user.points += 13
+                    user.points += 10
                     points = user.points
                     user.convertisseur_temperature = True
                     db.session.commit()
             case 5:
                 res = test.test5(input_script, user_name)
                 if res:
-                    user.points += 13
+                    user.points += 10
+                    user.convertisseur_devise = True
                     points = user.points
-                    user.calculateur_surface = True
                     db.session.commit()
             case 6:
                 res = test.test6(input_script, user_name)
                 if res:
-                    user.points += 13
+                    user.points += 14
                     points = user.points
-                    user.convertisseur_devise = True
+                    user.calculateur_surface = True
                     db.session.commit()
             case 7:
                 res = test.test7(input_script, user_name)
                 if res:
-                    user.points += 13
+                    user.points += 16
                     points = user.points
                     user.generateur_mot_de_passe = True
                     db.session.commit()
             case 8:
                 res = test.test8(input_script, user_name)
                 if res:
-                    user.points += 13
+                    user.points += 22
                     points = user.points
                     user.obtenir_adresse_ip = True
                     db.session.commit()
                 
                 
-                
-            # case 8:
-            #     res = test8(input_script)
                 
                 
         

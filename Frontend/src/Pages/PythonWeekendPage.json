@@ -25,15 +25,15 @@
       "pass": false
     },
     {
-      "title": "Calculateur de Surface",
-      "description": "Calculez la surface de différentes formes en fonction de l'entrée utilisateur. Comprenez les instructions conditionnelles pour différents calculs.",
-      "output": "$ python calculateur_surface.py\nEntrez la forme (rectangle, cercle) : rectangle\nEntrez la longueur : 4\nEntrez la largeur : 5\nSurface : 20.0",
-      "pass": false
-    },
-    {
       "title": "Convertisseur de Devise",
       "description": "Créez un programme qui convertit les valeurs de devise. Entraînez-vous à utiliser la saisie utilisateur et les opérations arithmétiques de base, baser sur (1 US Dollar == 10.03 Moroccan Dirham).",
       "output": "$ python convertisseur_devise.py\nEntrez le montant (USD) : 50\nMontant converti : 501,53 MAD",
+      "pass": false
+    },
+    {
+      "title": "Calculateur de Surface",
+      "description": "Calculez la surface de différentes formes en fonction de l'entrée utilisateur. Comprenez les instructions conditionnelles pour différents calculs.",
+      "output": "$ python calculateur_surface.py\nEntrez la forme (rectangle, cercle) : rectangle\nEntrez la longueur : 4\nEntrez la largeur : 5\nSurface : 20.0",
       "pass": false
     },
     {

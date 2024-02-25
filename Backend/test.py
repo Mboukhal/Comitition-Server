@@ -111,7 +111,7 @@ def test4(input_script, user):
         return False
       
       
-def test5(input_script, user):
+def test6(input_script, user):
   
     
     
@@ -152,7 +152,7 @@ def test5(input_script, user):
         shutil.rmtree(f'test/{user}')
         return False
       
-def test6(input_script, user):
+def test5(input_script, user):
   
     
     
