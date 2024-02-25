@@ -4,7 +4,7 @@ import pythonWeekend from "./PythonWeekendPage.json";
 import React from "react";
 // ... (other imports)
 
-const BACK_END_URL = "http://127.0.0.1:5000";
+const BACK_END_URL = "http://10.11.1.1:4040";
 
 export const Retourner = () => {
   const [name, setName] = useState<string>(
@@ -19,7 +19,7 @@ export const Retourner = () => {
   const PythonWeekendPage = ({ data }: { data: any }) => {
     return (
       <div className="container mx-auto py-4 px-2 ">
-        {data.pythonWeekend.map((item, index) => (
+        {data.pythonWeekend.map((item: any, index: number) => (
           <div key={index} className="mb-20">
             <h2 className="text-3xl font-semibold mb-4 text-green-300">
               {index + 1} - {item.title}
